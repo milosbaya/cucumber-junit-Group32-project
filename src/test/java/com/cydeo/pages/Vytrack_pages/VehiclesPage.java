@@ -13,9 +13,23 @@ public class VehiclesPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(partialLinkText = "Reset")
     public WebElement resetBtn;
+
+    @FindBy(xpath="//a[@title=\"Grid Settings\"]")
+    public WebElement gridSetting;
+
+    @FindBy(xpath ="//div[.=\"Grid Settings\"]")
+    public WebElement  gridMsg;
+
+    @FindBy(xpath = "//td[@class=\"visibility-cell\"]")
+    public WebElement idButton;
+
+    @FindBy(xpath = "//tr[@class=\"grid-header-row\"]//th[2]")
+    public  WebElement idColumn;
+
+    @FindBy(xpath = "//tr[@class=\"grid-header-row\"]//th[1]")
+    public  WebElement idColumn1;     // truck driver and sales manager id column verification
 
     @FindBy(partialLinkText = "Refresh")
     public WebElement refreshBtn;
