@@ -111,4 +111,26 @@ public class RefreshBtn_StepDefinitions {
         BrowserUtils.waitForClickablility(dashboardPage.vehiclesBtn, 10);
         dashboardPage.vehiclesBtn.click();
     }
+
+    // a store manager
+
+    @Then("the store manager sees the title of the page {string}")
+    public void the_store_manager_sees_the_title_of_the_page(String expectedtitle) {
+        wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.titleIs(expectedtitle));
+        Assert.assertTrue(driver.getTitle().equals(expectedtitle));
+    }
+
+    @When("the store manager sees Refresh button on the left side of Reset button")
+    public void the_store_manager_sees_refresh_button_on_the_left_side_of_reset_button() {
+
+    }
+    @Then("the store manager should be able to click Refresh button")
+    public void the_store_manager_should_be_able_to_click_refresh_button() {
+
+    }
+    @Then("the store manager should see refreshing element is present on the page")
+    public void the_store_manager_should_see_refreshing_element_is_present_on_the_page() {
+
+    }
 }
