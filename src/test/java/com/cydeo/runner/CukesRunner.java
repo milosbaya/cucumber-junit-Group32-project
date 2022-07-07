@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_definitions" ,
         dryRun = false,
-        tags ="@vytrack_resfresh_btn and @B26G32-60 and @B26G32-61",
+        tags =" @vehicles_page_store_manager",
         monochrome = true
 )
 
