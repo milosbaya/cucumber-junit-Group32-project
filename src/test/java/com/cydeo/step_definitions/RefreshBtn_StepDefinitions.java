@@ -102,7 +102,7 @@ public class RefreshBtn_StepDefinitions {
 
     @When("the user clicks on Fleet dropdown")
     public void theUserClicksOnFleetDropdown() {
-        BrowserUtils.waitForClickablility(dashboardPage.fleetBtn, 10);
+        BrowserUtils.waitForClickablility(dashboardPage.getFleetBtn(username), 10);
         dashboardPage.getFleetBtn(username).click();
     }
 
