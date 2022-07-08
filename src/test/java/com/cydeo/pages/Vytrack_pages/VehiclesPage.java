@@ -37,6 +37,23 @@ public class VehiclesPage {
     @FindBy(xpath = "(//div[@class='loader-frame'])[1]")
     public WebElement loadingElement;
 
+    @FindBy(xpath = "//h1[.='Cars']")
+    public WebElement carsTitle;
+
+    @FindBy(xpath = "(//a[@href='#'])[12]")
+    public  WebElement exportGridBth;
+
+    @FindBy(xpath = "(//a[@class='no-hash'])[2]")
+    public WebElement CSV;
+
+    @FindBy(xpath ="(//a[@class='no-hash'])[3]")
+    public WebElement XLSX;
+
+//    @FindBy(xpath = "//div[@class='btn-group open']/a")
+//    public WebElement exportGridBtnDropDown;
+
+
+
 
     public boolean IfBtnOnTheLeft(String btnRight, String btnLeft){
 
