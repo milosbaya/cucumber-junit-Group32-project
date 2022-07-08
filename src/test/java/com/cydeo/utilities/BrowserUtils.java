@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Set;
 
 public class BrowserUtils {
+    //TEST
     //    TC : Create utility method
 //   1. Create a new class called BrowserUtils
 //   2. Create a method to make Multiple Windows logic re-usable 3. When method is called, it should switch window and verify
