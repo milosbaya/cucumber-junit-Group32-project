@@ -172,8 +172,8 @@ public class RefreshBtn_StepDefinitions {
 
     @And("the sales manager should see refreshing element is present on the page")
     public void theSalesManagerShouldSeeRefreshingElementIsPresentOnThePage() {
-        wait = new WebDriverWait(Driver.getDriver(), 10);
-        wait.until(ExpectedConditions.visibilityOf(vehiclesPage.loadingElement));
+        wait = new WebDriverWait(Driver.getDriver(), 20);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class='loader-frame'])[1]")));
 
         Assert.assertTrue("Visibility of element is failed!", vehiclesPage.loadingElement.isDisplayed());
     }
