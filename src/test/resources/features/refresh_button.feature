@@ -31,3 +31,12 @@ Scenario: Store manager is able to access Vehicles page
     Then the store manager should be able to click Refresh button
     And the store manager should see refreshing element is present on the page
 
+  @vehicles_page_sales_manager  @B26G32-74 @B26G32-75
+  Scenario: Sales manager is able to access Vehicles page
+    Then the Sales manager sees the title of the page "All - Car - Entities - System - Car - Entities - System"
+
+    @refresh_button_sales_manager  @B26G32-74 @B26G32-75
+  Scenario: Sales manager is able to click Refresh button
+    When the sales manager sees Refresh button on the left side of Reset button
+    Then the sales manager should be able to click Refresh button
+    And the sales manager should see refreshing element is present on the page
