@@ -16,8 +16,12 @@ public class VehiclesPage {
     @FindBy(partialLinkText = "Reset")
     public WebElement resetBtn;
 
-    @FindBy(xpath="//a[@title=\"Grid Settings\"]")
-    public WebElement gridSetting;
+//    @FindBy(xpath="//a[@title=\"Grid Settings\"]")
+//    public WebElement gridSetting;
+
+    @FindBy(xpath = "//i[@class='fa-cog hide-text']")
+    public WebElement Grid;
+
 
     @FindBy(xpath ="//div[.=\"Grid Settings\"]")
     public WebElement  gridMsg;
@@ -39,6 +43,9 @@ public class VehiclesPage {
 
     @FindBy(xpath = "//h1[.='Cars']")
     public WebElement carsTitle;
+
+    @FindBy (xpath = "//h1[@class='oro-subtitle']")
+    public WebElement carsTitleSM;
 
     @FindBy(partialLinkText = "Export Grid")
     public  WebElement exportGridBth;
