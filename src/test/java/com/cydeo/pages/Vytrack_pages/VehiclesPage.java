@@ -13,15 +13,46 @@ public class VehiclesPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(partialLinkText = "Reset")
     public WebElement resetBtn;
+
+    @FindBy(xpath="//a[@title=\"Grid Settings\"]")
+    public WebElement gridSetting;
+
+    @FindBy(xpath ="//div[.=\"Grid Settings\"]")
+    public WebElement  gridMsg;
+
+    @FindBy(xpath = "//td[@class=\"visibility-cell\"]")
+    public WebElement idButton;
+
+    @FindBy(xpath = "//tr[@class=\"grid-header-row\"]//th[2]")
+    public  WebElement idColumn;
+
+    @FindBy(xpath = "//tr[@class=\"grid-header-row\"]//th[1]")
+    public  WebElement idColumn1;     // truck driver and sales manager id column verification
 
     @FindBy(partialLinkText = "Refresh")
     public WebElement refreshBtn;
 
     @FindBy(xpath = "(//div[@class='loader-frame'])[1]")
     public WebElement loadingElement;
+
+    @FindBy(xpath = "//h1[.='Cars']")
+    public WebElement carsTitle;
+
+    @FindBy(partialLinkText = "Export Grid")
+    public  WebElement exportGridBth;
+    //"(//a[@href='#'])[12]"
+    @FindBy(xpath = "(//a[@class='no-hash'])[2]")
+    public WebElement CSV;
+
+    @FindBy(xpath ="(//a[@class='no-hash'])[3]")
+    public WebElement XLSX;
+
+//    @FindBy(xpath = "//div[@class='btn-group open']/a")
+//    public WebElement exportGridBtnDropDown;
+
+
 
 
     public boolean IfBtnOnTheLeft(String btnRight, String btnLeft){

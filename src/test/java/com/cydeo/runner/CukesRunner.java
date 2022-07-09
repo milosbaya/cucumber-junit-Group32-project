@@ -8,11 +8,14 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin ={"html:target/cucumber-report.html",
-        "json:target/cucumber-reports/cucumber.json"},
+                "json:target/cucumber-report.json",
+                "rerun:target/rerun.txt",
+                "pretty"},
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_definitions" ,
         dryRun = false,
-        tags ="@vytrack_resfresh_btn and @B26G32-60 and @B26G32-61"
+        tags =" @vehicles_page_store_manager",
+        monochrome = true
 )
 
 public class CukesRunner {

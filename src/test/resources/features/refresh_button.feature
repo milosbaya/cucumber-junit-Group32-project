@@ -5,16 +5,29 @@ Feature: Vytrack app Refresh button feature
 
   Accounts are: truck driver, store manager, sales manager
 
-  @vehicles_page
-  Scenario: Truck driver is able to access Vehicles page
-    Given the truck driver is on Vytrack homepage
-    When the truck driver clicks on Fleet dropdown
-    Then the truck driver clicks on Vehicles under fleet dropdown
-    And the truck driver sees the title of the page "Car - Entities - System - Car - Entities - System"
+  Background:
+    Given the user is on Vytrack homepage
+    When the user clicks on Fleet dropdown
+    Then the user clicks on Vehicles under fleet dropdown
 
-  @refresh_button
+  @vehicles_page_truck_driver
+  Scenario: Truck driver is able to access Vehicles page
+
+    Then the truck driver sees the title of the page "Car - Entities - System - Car - Entities - System"
+
+  @refresh_button_truck_driver
   Scenario: Truck driver is able to click Refresh button
-    Given the truck driver is on Vehicles page
     When the driver sees Refresh button on the left side of Reset button
     Then the truck driver should be able to click Refresh button
     And the truck driver should see refreshing element is present on the page
+
+  @vehicles_page_store_manager
+Scenario: Store manager is able to access Vehicles page
+    Then the store manager sees the title of the page "All - Car - Entities - System - Car - Entities - System"
+
+  @refresh_button_store_manager
+  Scenario: Store manager is able to click Refresh button
+    When the store manager sees Refresh button on the left side of Reset button
+    Then the store manager should be able to click Refresh button
+    And the store manager should see refreshing element is present on the page
+
