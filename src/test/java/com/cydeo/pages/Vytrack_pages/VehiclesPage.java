@@ -40,9 +40,9 @@ public class VehiclesPage {
     @FindBy(xpath = "//h1[.='Cars']")
     public WebElement carsTitle;
 
-    @FindBy(xpath = "(//a[@href='#'])[12]")
+    @FindBy(partialLinkText = "Export Grid")
     public  WebElement exportGridBth;
-
+    //"(//a[@href='#'])[12]"
     @FindBy(xpath = "(//a[@class='no-hash'])[2]")
     public WebElement CSV;
 
