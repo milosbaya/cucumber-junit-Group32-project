@@ -21,11 +21,11 @@ Feature: Vytrack app Refresh button feature
     Then the truck driver should be able to click Refresh button
     And the truck driver should see refreshing element is present on the page
 
-  @vehicles_page_store_manager
+  @vehicles_page_store_manager @B26G32-73 @B26G32-69
 Scenario: Store manager is able to access Vehicles page
     Then the store manager sees the title of the page "All - Car - Entities - System - Car - Entities - System"
 
-  @refresh_button_store_manager
+  @refresh_button_store_manager @B26G32-73 @B26G32-69
   Scenario: Store manager is able to click Refresh button
     When the store manager sees Refresh button on the left side of Reset button
     Then the store manager should be able to click Refresh button
