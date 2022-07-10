@@ -48,8 +48,8 @@ String username = ConfigurationReader.getProperty("vytrack_username");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Export Grid")));
       //  int exportGridBtnPosition=vehiclesPage.exportGridBth.getLocation().getX();
        // System.out.println("ExportGrid Button position:"+exportGridBtnPosition);
-        int x = vehiclesPage.exportGridBth.getLocation().getX();//x=12
-        Assert.assertTrue(x>0);
+       // int x = vehiclesPage.exportGridBth.getLocation().getX();//x=12
+        Assert.assertTrue(vehiclesPage.isTheElementOnTheLeftSideOfPage(vehiclesPage.exportGridBth));
     }
     @Then("user should be able to click Export Grid dropdown")
     public void user_should_be_able_to_click_export_grid_dropdown() throws InterruptedException {

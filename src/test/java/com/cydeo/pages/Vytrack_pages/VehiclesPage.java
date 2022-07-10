@@ -2,9 +2,12 @@ package com.cydeo.pages.Vytrack_pages;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class VehiclesPage {
 
@@ -78,4 +81,25 @@ public class VehiclesPage {
         return check;
     }
 
+    @FindBy(xpath = "//label[@class='dib']")
+    public WebElement center;
+
+
+    public boolean isTheElementOnTheLeftSideOfPage(WebElement element){
+
+        int xElement = element.getLocation().getX();
+
+        int xCenter = center.getLocation().getX();
+        return xCenter>xElement;
+
+    }
+
+    public boolean isTheElementOnTheRIGHTSideOfPage(WebElement element){
+
+        int xElement = element.getLocation().getX();
+
+        int xCenter = center.getLocation().getX();
+        return xCenter<xElement;
+
+    }
 }
