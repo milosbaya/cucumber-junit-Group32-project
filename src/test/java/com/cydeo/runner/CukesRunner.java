@@ -7,15 +7,18 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin ={"html:target/cucumber-report.html",
+        plugin ={
+                "pretty",
+                "html:target/cucumber-report.html",
                 "json:target/cucumber-report.json",
                 "rerun:target/rerun.txt",
                 "pretty"},
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_definitions" ,
         dryRun = false,
-        tags =" @vehicles_page_store_manager",
-        monochrome = true
+        tags ="@export_grid_feature",
+        monochrome = true,
+        publish = true
 )
 
 public class CukesRunner {
