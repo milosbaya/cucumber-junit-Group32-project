@@ -81,15 +81,13 @@ public class VehiclesPage {
         return check;
     }
 
-    @FindBy(xpath = "//label[@class='dib']")
-    public WebElement center;
 
 
     public boolean isTheElementOnTheLeftSideOfPage(WebElement element){
 
         int xElement = element.getLocation().getX();
-
-        int xCenter = center.getLocation().getX();
+        int winWidth = Driver.getDriver().manage().window().getSize().getWidth();
+        int xCenter = winWidth/2;
         return xCenter>xElement;
 
     }
@@ -97,8 +95,8 @@ public class VehiclesPage {
     public boolean isTheElementOnTheRIGHTSideOfPage(WebElement element){
 
         int xElement = element.getLocation().getX();
-
-        int xCenter = center.getLocation().getX();
+        int winWidth = Driver.getDriver().manage().window().getSize().getWidth();
+        int xCenter = winWidth/2;
         return xCenter<xElement;
 
     }
